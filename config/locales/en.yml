@@ -41,11 +41,13 @@ en:
         success: 'User created successfully.'
   views:
       signup:
+        page_title: 'Sign Up'
         actions:
           confirm_button: 'Ok'
         labels:
           signup_box_title: 'Sign Up'
       login:
+        page_title: 'LogIn'
         actions:
           login_button: 'Login'
         labels:

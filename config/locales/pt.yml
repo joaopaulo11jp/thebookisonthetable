@@ -41,11 +41,13 @@ pt:
         success: 'Usuário cadastrado com sucesso.'
   views:
     signup:
+      page_title: 'Cadastro'
       actions:
         confirm_button: 'Confirmar'
       labels:
         signup_box_title: 'Cadastre-se'
     login:
+      page_title: 'Entrar'
       actions:
         login_button: 'LogIn'
       labels:
