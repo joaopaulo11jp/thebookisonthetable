@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= full_title(yield(:title)) %></title>
+  <%= stylesheet_link_tag    'application', media: 'all'%>
+  <%= javascript_include_tag 'application'%>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a href="#">
+            Start Bootstrap
+          </a>
+        </li>
+        <li>
+          <a href="#">Dashboard</a>
+        </li>
+        <li>
+          <a href="#">Shortcuts</a>
+        </li>
+        <li>
+          <a href="#">Overview</a>
+        </li>
+        <li>
+          <a href="#">Events</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Services</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <!--<div class="container">-->
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="#">
+          <div class="navbar-brand">
+            <span class="glyphicon glyphicon-book"> TheBookIsOnTheTable </span>
+          </div>
+        </a>
+
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <!-- <ul class="nav navbar-nav">
+        <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+      <a href="#">Services</a>
+    </li>
+    <li>
+    <a href="#">Contact</a>
+  </li>
+
+</ul> -->
+<ul class="nav navbar-nav pull-right">
+  <li>
+    <a data-toggle="modal" data-target="#loginModal">LogIn <span class="glyphicon glyphicon-log-in"></span></a>
+  </li>
+  <li>
+    <a href="#" data-toggle="modal">SignUp <span class="glyphicon glyphicon-circle-arrow-up"></span></a>
+  </li>
+</ul>
+</div>
+
+
+
+
+
+<!-- /.navbar-collapse -->
+
+<!--</div>-->
+<!-- /.container -->
+</nav>
+<!-- Page Content -->
+
+
+<br><br>
+
+<section>
+  <div class="container">
+    <br/><br/>
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+    <%= yield %>
+    <%= debug(params) if Rails.env.development? %>
+  </div>
+</section>
+
+</body>
+<!-- Modals -->
+<!-- .login-modal -->
+<div id="loginModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+    <form action="login" method="POST">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+
+          <div class="input-group input-group-sm">
+            <span class="input-group-addon" id="sizing-addon3">@</span>
+            <input type="text" class="form-control" name="login" placeholder="Username" aria-describedby="sizing-addon3">
+          </div>
+          <div class="input-group input-group-sm">
+            <span class="input-group-addon" id="sizing-addon4">@</span>
+            <input type="text" class="form-control" name="password" placeholder="Password" aria-describedby="sizing-addon4">
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Login</button>
+      </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+<!-- /login-modal -->
+
+<!-- Modals end -->
+</html>

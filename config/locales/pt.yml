@@ -1,0 +1,52 @@
+pt:
+  activerecord:
+    models:
+      user:
+        one: Usuário
+        other: Usuários
+    attributes:
+      user:
+        name: Nome
+        email: E-mail
+        password: Senha
+        password_confirmation: Confirmação de Senha
+    errors:
+      messages:
+        blank: 'não pode ser branco'
+      template:
+        body: 'There were problems with the following fields:'
+        header:
+          one: 1 erro ao tentar salvar %{model}
+          other: "%{count} erros ao tentar salvar %{model}"
+      models:
+          user:
+            attributes:
+              name:
+                invalid: 'invalido.'
+                blank: 'não pode ser branco'
+              email:
+                invalid: 'inválido.'
+                blank: 'não pode ser branco'
+                taken: 'Ja foi cadastrado'
+              password:
+                invalid: 'invalido.'
+                blank: 'não pode ser branco'
+                too_short: 'precisa ter no mínimo 6 caracteres'
+              password_confirmation:
+                blank: 'não pode ser branco'
+                confirmation: 'precisar ser igual a senha informada'
+  controllers:
+    users:
+      flash:
+        success: 'Usuário cadastrado com sucesso.'
+  views:
+    signup:
+      actions:
+        confirm_button: 'Confirmar'
+      labels:
+        signup_box_title: 'Cadastre-se'
+    login:
+      actions:
+        login_button: 'LogIn'
+      labels:
+        login_box_title: 'Entrar'

@@ -1,0 +1,52 @@
+en:
+  activerecord:
+    models:
+      user:
+        one: User
+        other: Users
+    attributes:
+      user:
+        name: Name
+        email: E-mail
+        password: Password
+        password_confirmation: Password confirmation
+    errors:
+      messages:
+        blank: 'can not be blank'
+      template:
+        body: 'There were problems with the following fields:'
+        header:
+          one: 1 error on save %{model}
+          other: "%{count} errors on save %{model}"
+    models:
+        user:
+          attributes:
+            name:
+              invalid: 'invalid.'
+              blank: 'can not be blank'
+            email:
+              invalid: 'invalid.'
+              blank: 'can not be blank'
+              taken: 'Already in use'
+            password:
+              invalid: 'invalid.'
+              blank: 'can not be blank'
+              too_short: 'must have 6 characters at least'
+            password_confirmation:
+              blank: 'can not be blank'
+              confirmation: 'password confirmation must be equals password'
+  controllers:
+    users:
+      flash:
+        success: 'User created successfully.'
+  views:
+      signup:
+        actions:
+          confirm_button: 'Ok'
+        labels:
+          signup_box_title: 'Sign Up'
+      login:
+        actions:
+          login_button: 'Login'
+        labels:
+          login_box_title: 'Log In'

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= full_title(yield(:title)) %></title>
+  <%= stylesheet_link_tag    'application', media: 'all'%>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container">
+    <br/><br/>
+    <div id="form-box">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
