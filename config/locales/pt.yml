@@ -39,7 +39,18 @@ pt:
     users:
       flash:
         success: 'Usuário cadastrado com sucesso.'
+    sessions:
+      flash:
+        success:
+        failure: 'E-mail e/ou senha inválido(s).'
   views:
+    application:
+      signup: 'Cadastre-se'
+      login: 'Entre'
+      user_dropdown:
+        user_edit: 'Alterar dados'
+        exchanges: 'Trocas'
+        logout: 'Sair'
     signup:
       page_title: 'Cadastro'
       actions:
@@ -49,6 +60,6 @@ pt:
     login:
       page_title: 'Entrar'
       actions:
-        login_button: 'LogIn'
+        login_button: 'Entrar'
       labels:
-        login_box_title: 'Entrar'
+        login_box_title: 'Autenticação'

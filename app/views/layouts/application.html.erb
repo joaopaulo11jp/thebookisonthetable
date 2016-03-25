@@ -75,13 +75,25 @@
   </li>
 
 </ul> -->
-<ul class="nav navbar-nav pull-right">
+<ul class="nav navbar-nav navbar-right">
+  <% if logged_in? %>
+  <li class="dropdown">
+         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.name %> <span class="caret"></span></a>
+         <ul class="dropdown-menu">
+           <li><%= link_to t('views.application.user_dropdown.user_edit'), '#'%></li>
+           <li><%= link_to t('views.application.user_dropdown.exchanges'), '#'%></li>
+           <li role="separator" class="divider"></li>
+           <li><%= link_to t('views.application.user_dropdown.logout'), logout_path, method: :delete %></li>
+         </ul>
+  </li>
+  <% else %>
   <li>
-    <a href="#" data-target="#loginModal">LogIn <span class="glyphicon glyphicon-log-in"></span></a>
+    <a href="/login" data-target="#loginModal"><%= t('views.application.login') %> <span class="glyphicon glyphicon-log-in"></span></a>
   </li>
   <li>
-    <a href="/signup" data-toggle="modal">SignUp <span class="glyphicon glyphicon-circle-arrow-up"></span></a>
+    <a href="/signup" data-toggle="modal"><%= t('views.application.signup') %> <span class="glyphicon glyphicon-circle-arrow-up"></span></a>
   </li>
+  <% end %>
 </ul>
 </div>
 

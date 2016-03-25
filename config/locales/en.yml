@@ -39,16 +39,27 @@ en:
     users:
       flash:
         success: 'User created successfully.'
+    sessions:
+      flash:
+        success:
+        failure: 'Email and/or password invalid(s)'
   views:
-      signup:
-        page_title: 'Sign Up'
-        actions:
-          confirm_button: 'Ok'
-        labels:
-          signup_box_title: 'Sign Up'
-      login:
-        page_title: 'LogIn'
-        actions:
-          login_button: 'Login'
-        labels:
-          login_box_title: 'Log In'
+    application:
+      signup: 'SignUp'
+      login: 'LogIn'
+      user_dropdown:
+        user_edit: 'Edit account'
+        exchanges: 'Exchanges'
+        logout: 'LogOut'
+    signup:
+      page_title: 'Sign Up'
+      actions:
+        confirm_button: 'Ok'
+      labels:
+        signup_box_title: 'Sign Up'
+    login:
+      page_title: 'LogIn'
+      actions:
+        login_button: 'Login'
+      labels:
+        login_box_title: 'Log In'

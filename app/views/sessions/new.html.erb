@@ -1,0 +1,19 @@
+<%= provide(:title, t('views.login.page_title')) %>
+
+<div class="panel panel-primary">
+  <div class="panel-heading"><%= t('views.login.labels.login_box_title') %></div>
+  <div class="panel-body">
+  <%= form_for(:session, url: login_path) do |f| %>
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+    <%= f.label :email, t('activerecord.attributes.user.email') %>
+    <%= f.email_field :email, class: 'form-control' %>
+
+    <%= f.label :password, t('activerecord.attributes.user.password') %>
+    <%= f.password_field :password, class: 'form-control' %>
+    <br/>
+    <%= f.submit t('views.login.actions.login_button'), class: "btn btn-primary" %>
+  <% end %>
+  </div>
+</div>
