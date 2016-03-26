@@ -1,7 +1,12 @@
 class UsersController < ApplicationController
 
   def show
-    @user = User.find(params[:id])
+    if logged_in? then
+      @user = current_user
+      render layout: 'dashboard/dashboard'
+    else
+      redirect_to root_url
+    end
   end
 
   def new

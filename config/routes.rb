@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'dashboard/exchange_received'
-
-  get 'dashboard/exchange_sent'
-
   root 'app#index'
 
   get 'users/new'
@@ -11,6 +7,13 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
   resources :users
+
+
+  get 'dashboard' => 'users#show'
+  get 'dashboard/exchange_received' => 'dashboard#exchange_received'
+  get 'dashboard/exchange_sent' => 'dashboard#exchange_sent'
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
