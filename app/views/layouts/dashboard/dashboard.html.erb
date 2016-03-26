@@ -25,7 +25,7 @@
           <a href="#"><%= t('views.dashboard.exchange_received') %></a>
         </li>
         <li>
-          <a href="#"><%= t('views.dashboard.sent') %></a>
+          <a href="#"><%= t('views.dashboard.exchange_sent') %></a>
         </li>
         <li>
           <a href="#"><%= t('views.dashboard.book_crud') %></a>
@@ -81,7 +81,7 @@
          </ul>
   </li>
   <% else %>
-    redirect_to root_url
+    <% controller.redirect_to root_url %>
   <% end %>
 </ul>
 </div>
