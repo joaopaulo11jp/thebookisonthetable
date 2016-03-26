@@ -39,6 +39,7 @@ en:
     users:
       flash:
         success: 'User created successfully.'
+        needed_login_error: 'Please, log in'
     sessions:
       flash:
         success:

@@ -1,12 +1,9 @@
 class UsersController < ApplicationController
+  before_action :logged_in_user, only: :show
 
   def show
-    if logged_in? then
-      @user = current_user
-      render layout: 'dashboard/dashboard'
-    else
-      redirect_to root_url
-    end
+    @user = current_user
+    render layout: 'dashboard/dashboard'
   end
 
   def new
@@ -27,5 +24,12 @@ class UsersController < ApplicationController
   private
     def user_params
       params.require(:user).permit(:name,:email,:password,:password_confirmation)
+    end
+
+    def logged_in_user
+      unless logged_in?
+        flash[:danger] = t('controllers.users.flash.needed_login_error')
+        redirect_to login_url
+      end
     end
 end

@@ -39,6 +39,7 @@ pt:
     users:
       flash:
         success: 'Usuário cadastrado com sucesso.'
+        needed_login_error: 'Por favor, faça login'
     sessions:
       flash:
         success:
