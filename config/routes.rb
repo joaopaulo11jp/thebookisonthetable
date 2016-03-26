@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'dashboard/exchange_received'
+
+  get 'dashboard/exchange_sent'
+
   root 'app#index'
 
   get 'users/new'

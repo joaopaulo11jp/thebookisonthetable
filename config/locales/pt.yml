@@ -51,6 +51,12 @@ pt:
         user_edit: 'Alterar dados'
         exchanges: 'Trocas'
         logout: 'Sair'
+    dashboard:
+      user_edit: 'Alterar dados'
+      exchange_received: 'Propostas Recebidas'
+      exchange_sent: 'Propostas Enviadas'
+      book_crud: 'Meus livros'
+      preferences: 'Preferências'
     signup:
       page_title: 'Cadastro'
       actions:

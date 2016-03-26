@@ -51,6 +51,12 @@ en:
         user_edit: 'Edit account'
         exchanges: 'Exchanges'
         logout: 'LogOut'
+    dashboard:
+      user_edit: 'Edit user'
+      exchange_received: 'Received exchanges'
+      exchange_sent: 'Exchanges sent'
+      book_crud: 'My books'
+      preferences: 'Preferences'    
     signup:
       page_title: 'Sign Up'
       actions:

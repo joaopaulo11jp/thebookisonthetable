@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= full_title(yield(:title)) %></title>
+  <%= stylesheet_link_tag    'application', media: 'all'%>
+  <%= javascript_include_tag 'application'%>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a href="#">
+            Start Bootstrap
+          </a>
+        </li>
+        <li>
+          <a href="#"><%= t('views.dashboard.user_edit') %></a>
+        </li>
+        <li>
+          <a href="#"><%= t('views.dashboard.exchange_received') %></a>
+        </li>
+        <li>
+          <a href="#"><%= t('views.dashboard.sent') %></a>
+        </li>
+        <li>
+          <a href="#"><%= t('views.dashboard.book_crud') %></a>
+        </li>
+        <li>
+          <a href="#"><%= t('views.dashboard.preferences') %></a>
+        </li>
+      </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <!--<div class="container">-->
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="#">
+          <div class="navbar-brand">
+            <span class="glyphicon glyphicon-book"> TheBookIsOnTheTable </span>
+          </div>
+        </a>
+
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <!-- <ul class="nav navbar-nav">
+        <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+      <a href="#">Services</a>
+    </li>
+    <li>
+    <a href="#">Contact</a>
+  </li>
+
+</ul> -->
+<ul class="nav navbar-nav navbar-right">
+  <% if logged_in? %>
+  <li class="dropdown">
+         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.name %> <span class="caret"></span></a>
+         <ul class="dropdown-menu">
+           <li><%= link_to t('views.application.user_dropdown.user_edit'), '#'%></li>
+           <li><%= link_to t('views.application.user_dropdown.exchanges'), '#'%></li>
+           <li role="separator" class="divider"></li>
+           <li><%= link_to t('views.application.user_dropdown.logout'), logout_path, method: :delete %></li>
+         </ul>
+  </li>
+  <% else %>
+    redirect_to root_url
+  <% end %>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+
+<!--</div>-->
+<!-- /.container -->
+</nav>
+<!-- Page Content -->
+
+
+<br><br>
+
+<section>
+  <div class="container">
+    <br/><br/>
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+    <%= yield %>
+    <%= debug(params) if Rails.env.development? %>
+  </div>
+</section>
+
+</body>
+</html>
