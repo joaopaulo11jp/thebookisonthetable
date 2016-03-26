@@ -48,8 +48,7 @@ pt:
       signup: 'Cadastre-se'
       login: 'Entre'
       user_dropdown:
-        user_edit: 'Alterar dados'
-        exchanges: 'Trocas'
+        dashboard: 'Meu painel'
         logout: 'Sair'
     dashboard:
       user_edit: 'Alterar dados'
