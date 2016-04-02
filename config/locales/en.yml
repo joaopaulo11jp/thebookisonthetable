@@ -40,6 +40,9 @@ en:
       flash:
         success: 'User created successfully.'
         needed_login_error: 'Please, log in'
+      update:
+        flash:
+          success: 'Changes applied successfully'
     sessions:
       flash:
         success:
@@ -57,6 +60,12 @@ en:
       exchange_sent: 'Exchanges sent'
       book_crud: 'My books'
       preferences: 'Preferences'
+    update_user:
+      page_title: 'Edit user'
+      actions:
+        confirm_button: 'Edit user'
+      labels:
+        edit_box_title: 'Update'
     signup:
       page_title: 'Sign Up'
       actions:

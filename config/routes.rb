@@ -1,18 +1,22 @@
 Rails.application.routes.draw do
   root 'app#index'
 
-  get 'users/new'
   get 'signup' => 'users#new'
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
+
   resources :users
+
+  namespace :dashboard do
+      resources :users, only: [:index,:show,:edit,:update]
+  end
 
 
   get 'dashboard' => 'users#show'
+  get 'dashboard/user/edit' => 'users#edit'
   get 'dashboard/exchange_received' => 'dashboard#exchange_received'
   get 'dashboard/exchange_sent' => 'dashboard#exchange_sent'
-
 
 
   # The priority is based upon order of creation: first created -> highest priority.

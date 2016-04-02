@@ -40,6 +40,9 @@ pt:
       flash:
         success: 'Usuário cadastrado com sucesso.'
         needed_login_error: 'Por favor, faça login'
+      update:
+        flash:
+          success: 'Alteração feita com sucesso'
     sessions:
       flash:
         success:
@@ -57,6 +60,12 @@ pt:
       exchange_sent: 'Propostas Enviadas'
       book_crud: 'Meus livros'
       preferences: 'Preferências'
+    update_user:
+      page_title: 'Editar Usuário'
+      actions:
+        confirm_button: 'Alterar'
+      labels:
+        edit_box_title: 'Alteração'
     signup:
       page_title: 'Cadastro'
       actions:

@@ -11,6 +11,12 @@ class UsersController < ApplicationController
     render layout:'auth'
   end
 
+  def edit
+    logged_in_user
+    @user = current_user
+    render layout: 'dashboard/dashboard'
+  end
+
   def create
     @user = User.new(user_params)
     if @user.save
@@ -19,6 +25,15 @@ class UsersController < ApplicationController
     else
       render 'new', layout: 'auth'
     end
+  end
+
+  def update
+      if current_user.update user_params then
+        flash[:success] = t('controllers.users.update.flash.success')
+        redirect_to '/dashboard/user/edit'
+      else
+        redirect_to '/dashboard/user/edit'
+      end
   end
 
   private
