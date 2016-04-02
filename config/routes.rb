@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   get 'dashboard/user/edit' => 'users#edit'
   get 'dashboard/exchange_received' => 'dashboard#exchange_received'
   get 'dashboard/exchange_sent' => 'dashboard#exchange_sent'
+  get 'dashboard/preferences' => 'dashboard#preferences'
+  patch 'dashboard/preferences' => 'dashboard#update_user_preferences'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

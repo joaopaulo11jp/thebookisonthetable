@@ -8,6 +8,23 @@ class DashboardController < ApplicationController
   def exchange_sent
   end
 
+  def preferences
+
+  end
+
+  def update_user_preferences
+      case params[:language][:locale]
+      when 'pt'
+        current_user.update_attribute(:locale,'pt')
+      when 'en'
+        current_user.update_attribute(:locale,'en')
+      else
+        current_user.update_attribute(:locale,'pt')
+      end
+
+    redirect_to '/dashboard/preferences'
+  end
+
   private
     def logged_in_user
       unless logged_in?

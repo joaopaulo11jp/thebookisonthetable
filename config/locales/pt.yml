@@ -66,6 +66,13 @@ pt:
         confirm_button: 'Alterar'
       labels:
         edit_box_title: 'Alteração'
+    preferences:
+      page_title: 'Preferências'
+      actions:
+        confirm_button: 'Confirmar'
+      labels:
+        preferences_box_title: 'Preferências'
+        language: 'Língua'
     signup:
       page_title: 'Cadastro'
       actions:

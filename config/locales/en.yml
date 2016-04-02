@@ -66,6 +66,13 @@ en:
         confirm_button: 'Edit user'
       labels:
         edit_box_title: 'Update'
+    preferences:
+      page_title: 'Preferences'
+      actions:
+        confirm_button: 'Ok'
+      labels:
+        preferences_box_title: 'Preferences'
+        language: 'Language'    
     signup:
       page_title: 'Sign Up'
       actions:
