@@ -34,6 +34,8 @@ group :test do
   gem 'capybara', '2.1.0'
 end
 
+#Ineditas
+gem 'seed-fu', '~> 2.3', '>= 2.3.5'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
