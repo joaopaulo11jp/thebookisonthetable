@@ -1,2 +1,21 @@
-<h1>App#index</h1>
-<p>Find me in app/views/app/index.html.erb</p>
+
+<div class="row">
+  <div class="col-md-offset-1 padding-right">
+<div class="row">
+  <% @book_tables.each do |book| %>
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <img src="..." alt="...">
+      <div class="caption">
+        <h3><%= book.title %></h3>
+        <p><%= book.author %></p>
+        <p><a href="#" class="btn btn-primary" role="button"><%= t('views.application.book_box.exchange') %></a> </p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<div class="pagination col-md-12 pull-right">
+			<%= will_paginate @book_tables, renderer: BootstrapPagination::Rails %>
+</div>

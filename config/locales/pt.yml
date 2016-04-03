@@ -62,6 +62,8 @@ pt:
       user_dropdown:
         dashboard: 'Meu painel'
         logout: 'Sair'
+      book_box:
+        exchange: 'Trocar' 
     books:
       actions:
         new: 'Novo'

@@ -62,6 +62,8 @@ en:
       user_dropdown:
         dashboard: 'My dashboard'
         logout: 'LogOut'
+      book_box:
+        exchange: 'Exchange it!'  
     books:
       actions:
         new: 'New'
@@ -75,7 +77,7 @@ en:
       new:
         page_title: 'New book'
       grid:
-        page_title: 'My Books'  
+        page_title: 'My Books'
     dashboard:
       user_edit: 'Edit user'
       exchange_received: 'Received exchanges'

@@ -24,6 +24,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '3.1.7'
 #BootstrapGEM
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'will_paginate-bootstrap'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
