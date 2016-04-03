@@ -5,7 +5,7 @@ class BookTablesController < ApplicationController
   # GET /book_tables
   # GET /book_tables.json
   def index
-    @book_tables = BookTable.find_by(user_id:current_user.id)
+    @book_tables = BookTable.where(user_id:current_user.id)
   end
 
   # GET /book_tables/1
