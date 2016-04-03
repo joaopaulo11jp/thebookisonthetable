@@ -26,6 +26,8 @@ gem 'bcrypt', '3.1.7'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'will_paginate-bootstrap'
 
+gem 'friendly_id', '~> 5.1.0'
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end
