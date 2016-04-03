@@ -16,7 +16,8 @@
 
   <tbody>
     <!-- Arrumar isso aqui pra trazer só os do usuário -->
-    <% BookTable.all.each do |book| %>
+    <% if !@book_tables.nil? %>
+    <% @book_tables.each do |book| %>
       <tr>
         <td><%= book.title %></td>
         <td><%= book.author %></td>
@@ -32,6 +33,7 @@
 			    <% end %>
 		    </td>
       </tr>
+    <% end %>
     <% end %>
   </tbody>
 </table>
