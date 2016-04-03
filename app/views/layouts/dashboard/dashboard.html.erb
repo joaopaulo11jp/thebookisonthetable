@@ -28,7 +28,7 @@
           <a href="#"><%= t('views.dashboard.exchange_sent') %></a>
         </li>
         <li>
-          <a href="#"><%= t('views.dashboard.book_crud') %></a>
+          <a href="/dashboard/book"><%= t('views.dashboard.book_crud') %></a>
         </li>
         <li>
           <a href="/dashboard/preferences"><%= t('views.dashboard.preferences') %></a>
@@ -80,7 +80,8 @@
          </ul>
   </li>
   <% else %>
-    <% controller.redirect_to root_url %>
+    <% flash[:danger] = t('controllers.users.flash.needed_login_error') %>
+    <% controller.redirect_to login_path %>
   <% end %>
 </ul>
 </div>

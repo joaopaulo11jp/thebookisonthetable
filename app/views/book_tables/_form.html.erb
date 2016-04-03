@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1><%= (yield(:title))%></h1>
+    <%= form_for(@book_table) do |f| %>
+    <% if @book_table.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= t('activerecord.errors.template.header.other',
+        model: BookTable.model_name.human, count: @book_table.errors.count) %>
+      </h2>
+
+      <ul>
+        <% @book_table.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control' %>
+
+      <%= f.label :author %>
+      <%= f.text_field :author, class: 'form-control' %>
+
+      <%= f.label :category_id %>
+      <%= f.collection_select :category_id, Category.all, :id, :description %>
+    </div>
+
+    <div class="actions form-group">
+      <%= f.submit t('views.books.actions.save'), class: 'btn btn-primary', id: 'save_button' %>
+    </div>
+    <% end %>
+  </div>
+</div>

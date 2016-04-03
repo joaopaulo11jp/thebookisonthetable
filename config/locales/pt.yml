@@ -4,12 +4,20 @@ pt:
       user:
         one: Usuário
         other: Usuários
+      book_table:
+        one: Livro
+        other: Livros
     attributes:
       user:
         name: Nome
         email: E-mail
         password: Senha
         password_confirmation: Confirmação de Senha
+      book_table:
+        title: Título
+        author: Autor
+        category_id: Categoria
+        user_id: Usuário
     errors:
       messages:
         blank: 'não pode ser branco'
@@ -54,6 +62,20 @@ pt:
       user_dropdown:
         dashboard: 'Meu painel'
         logout: 'Sair'
+    books:
+      actions:
+        new: 'Novo'
+        edit: 'Editar'
+        remove: 'Remover'
+        save: 'Salvar'
+        show: 'Mostrar'
+        back: 'Voltar'
+      edit:
+        page_title: 'Editar Livro'
+      new:
+        page_title: 'Novo livro'
+      grid:
+        page_title: 'Meus Livros'
     dashboard:
       user_edit: 'Alterar dados'
       exchange_received: 'Propostas Recebidas'

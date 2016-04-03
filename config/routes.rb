@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
 
   resources :users
+  resources :book_tables
 
   namespace :dashboard do
       resources :users, only: [:index,:show,:edit,:update]
@@ -19,7 +20,14 @@ Rails.application.routes.draw do
   get 'dashboard/exchange_sent' => 'dashboard#exchange_sent'
   get 'dashboard/preferences' => 'dashboard#preferences'
   patch 'dashboard/preferences' => 'dashboard#update_user_preferences'
-
+  get 'dashboard/book' => 'book_tables#index'
+  get 'dashboard/book/new'=> 'book_tables#new'
+  get 'dashboard/book/:id' => 'book_tables#show', as: :dashboard_book_show
+  get 'dashboard/book/:id/edit'=> 'book_tables#edit', as: :dashboard_book_edit
+  post 'dashboard/book'=> 'book_tables#create'
+  patch 'dashboard/book/:id'=> 'book_tables#update'
+  put 'dashboard/book/:id'=> 'book_tables#update'
+  delete 'dashboard/book/:id'=> 'book_tables#destroy', as: :dashboard_book_delete
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

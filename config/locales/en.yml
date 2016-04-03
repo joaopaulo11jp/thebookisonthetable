@@ -4,12 +4,20 @@ en:
       user:
         one: User
         other: Users
+      book_table:
+        one: Book
+        other: Books
     attributes:
       user:
         name: Name
         email: E-mail
         password: Password
         password_confirmation: Password confirmation
+      book_table:
+        title: Title
+        author: Author
+        category_id: Category
+        user_id: User
     errors:
       messages:
         blank: 'can not be blank'
@@ -54,6 +62,20 @@ en:
       user_dropdown:
         dashboard: 'My dashboard'
         logout: 'LogOut'
+    books:
+      actions:
+        new: 'New'
+        edit: 'Edit'
+        remove: 'Remove'
+        save: 'Save'
+        show: 'Show'
+        back: 'Back'
+      edit:
+        page_title: 'Book edit'
+      new:
+        page_title: 'New book'
+      grid:
+        page_title: 'My Books'  
     dashboard:
       user_edit: 'Edit user'
       exchange_received: 'Received exchanges'
@@ -72,7 +94,7 @@ en:
         confirm_button: 'Ok'
       labels:
         preferences_box_title: 'Preferences'
-        language: 'Language'    
+        language: 'Language'
     signup:
       page_title: 'Sign Up'
       actions:
