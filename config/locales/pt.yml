@@ -63,7 +63,7 @@ pt:
         dashboard: 'Meu painel'
         logout: 'Sair'
       book_box:
-        exchange: 'Trocar' 
+        exchange: 'Trocar'
     books:
       actions:
         new: 'Novo'
@@ -109,3 +109,6 @@ pt:
         login_button: 'Entrar'
       labels:
         login_box_title: 'Autenticação'
+  will_paginate:
+    previous_label: "&#8592; Anterior"
+    next_label: "Próximo &#8594;"
