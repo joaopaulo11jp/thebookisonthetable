@@ -5,7 +5,9 @@
   <% @book_tables.each do |book| %>
   <div class="col-sm-6 col-md-3">
     <div class="thumbnail">
-      <img src="..." alt="...">
+      <div class="pull-right">
+      <p> <font size="1"><var><%= book.user.email %></var></font></p>
+    </div>
       <div class="caption">
         <h3><%= book.title %></h3>
         <p><%= book.author %></p>
