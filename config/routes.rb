@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
+  resources :exchanges
   root 'app#index'
 
   get 'signup' => 'users#new'
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
-  get '/:category' => 'app#index'
+  get 'categories/:category' => 'app#index'
+  get 'exchanges/new/:book_id' => 'exchanges#new'
 
   resources :users
   resources :book_tables
@@ -29,6 +31,8 @@ Rails.application.routes.draw do
   patch 'dashboard/book/:id'=> 'book_tables#update'
   put 'dashboard/book/:id'=> 'book_tables#update'
   delete 'dashboard/book/:id'=> 'book_tables#destroy', as: :dashboard_book_delete
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

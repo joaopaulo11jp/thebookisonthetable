@@ -109,6 +109,19 @@ en:
         login_button: 'Login'
       labels:
         login_box_title: 'Log In'
+    exchange:
+      errors:
+        unavailable_book: 'This book is unavailable to exchange'
+        unselected_book: 'You have not selected a book, please verify your collection'
+      new:
+        page_title: 'New exchange'
+        labels:
+          wished_book: 'Wished book'
+          title: 'Title'
+          author: 'Author'
+          your_book: 'Your book'
+        actions:
+          confirm: 'Confirm'
   will_paginate:
     previous_label: "&#8592; Previous"
-    next_label: "Next &#8594;"      
+    next_label: "Next &#8594;"

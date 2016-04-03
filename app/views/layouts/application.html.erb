@@ -20,7 +20,7 @@
         </li>
         <% Category.all.each do |category| %>
           <li>
-            <%= link_to category.description,'/'+category.friendly_id  %>
+            <%= link_to category.description,'/categories/'+category.friendly_id  %>
           </li>
         <% end %>
       </ul>

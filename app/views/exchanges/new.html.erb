@@ -1,0 +1,42 @@
+<% provide(:title, t('views.exchange.new.page_title')) %>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+  <div class="panel-heading"><%= t('views.exchange.new.page_title')%></div>
+  <div class="panel-body">
+    <h3><%= t('views.exchange.new.labels.wished_book') %></h3>
+    <div class="row">
+      <div class="col-md-offset-1">
+        <div class="row">
+          <div class="col-md-1">
+            <h4><%= t('views.exchange.new.labels.title') %></h4>
+          </div>
+          <div class="col-md-2 col-md-offset-1">
+            <h4><var><%= @exchange.receiver_book.title %></var></h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-1">
+            <h4><%= t('views.exchange.new.labels.author') %></h4>
+          </div>
+          <div class="col-md-2 col-md-offset-1">
+            <h4><var><%= @exchange.receiver_book.author %></var></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%= form_for(@exchange) do |f| %>
+    <%= hidden_field_tag :book_id, @exchange.receiver_book.id %>
+    <%= f.label t('views.exchange.new.labels.your_book') %>
+    <%= f.collection_select :sender_book, @availableBooks, :id, :title %>
+    <br/><br/>
+    <div class="actions form-group">
+      <%= f.submit t('views.exchange.new.actions.confirm'), class: 'btn btn-primary', id: 'save_button' %>
+    </div>
+    <% end %>
+  </div>
+</div>
+</div>
+</div>

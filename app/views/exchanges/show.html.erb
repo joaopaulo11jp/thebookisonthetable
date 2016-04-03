@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Receiver book:</strong>
+  <%= @exchange.receiver_book_id %>
+</p>
+
+<p>
+  <strong>Sender book:</strong>
+  <%= @exchange.sender_book_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @exchange.status %>
+</p>
+
+<%= link_to 'Edit', edit_exchange_path(@exchange) %> |
+<%= link_to 'Back', exchanges_path %>

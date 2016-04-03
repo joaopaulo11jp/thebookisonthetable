@@ -109,6 +109,19 @@ pt:
         login_button: 'Entrar'
       labels:
         login_box_title: 'Autenticação'
+    exchange:
+      errors:
+        unavailable_book: 'Este livro não está mais disponível para trocar'
+        unselected_book: 'Você não selecionou um livro, verifique sua coleção'
+      new:
+        page_title: 'Nova troca'
+        labels:
+          wished_book: 'Livro desejado'
+          title: 'Título'
+          author: 'Autor'
+          your_book: 'Seu livro'
+        actions:
+          confirm: 'Confirmar'
   will_paginate:
     previous_label: "&#8592; Anterior"
     next_label: "Próximo &#8594;"
