@@ -14,11 +14,11 @@ class UserSignupTest < ActionDispatch::IntegrationTest
       post_via_redirect users_path, user: {
         name: "TesteExemplo",
         email: "teste@testeexemplo.com",
-        password: "password",
-        password_confirmation: "password_confirmation"
+        password: "123456",
+        password_confirmation: "123456"
       }
     end
-    assert_template 'users/show'
+    assert_template 'sessions/new'
 
   end
-end  
+end
