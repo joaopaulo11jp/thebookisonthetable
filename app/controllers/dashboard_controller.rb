@@ -6,6 +6,7 @@ class DashboardController < ApplicationController
   end
 
   def exchange_sent
+    @exchanges = Exchange.joins(:sender_book).where('book_tables.user_id' => current_user.id)
   end
 
   def preferences

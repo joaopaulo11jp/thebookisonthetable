@@ -19,8 +19,6 @@ Rails.application.routes.draw do
 
   get 'dashboard' => 'users#show'
   get 'dashboard/user/edit' => 'users#edit'
-  get 'dashboard/exchange_received' => 'dashboard#exchange_received'
-  get 'dashboard/exchange_sent' => 'dashboard#exchange_sent'
   get 'dashboard/preferences' => 'dashboard#preferences'
   patch 'dashboard/preferences' => 'dashboard#update_user_preferences'
   get 'dashboard/book' => 'book_tables#index'
@@ -32,7 +30,8 @@ Rails.application.routes.draw do
   put 'dashboard/book/:id'=> 'book_tables#update'
   delete 'dashboard/book/:id'=> 'book_tables#destroy', as: :dashboard_book_delete
 
-
+  get 'dashboard/exchanges_sent' => 'dashboard#exchange_sent'
+  get 'dashboard/exchanges_received' => 'dashboard#exchange_received'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

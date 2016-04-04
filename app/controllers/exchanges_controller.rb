@@ -33,14 +33,11 @@ class ExchangesController < ApplicationController
     @exchange.receiver_book = @receiver_book
     @exchange.sender_book = @sender_book
     @exchange.status = :waiting
-    respond_to do |format|
-      if @exchange.save
-        format.html { redirect_to @exchange, notice: 'Exchange was successfully created.' }
-        format.json { render :show, status: :created, location: @exchange }
-      else
-        format.html { render :new }
-        format.json { render json: @exchange.errors, status: :unprocessable_entity }
-      end
+    if @exchange.save
+      flash[:sucess] = t('views.exchange.new.success.create')
+      redirect_to '/dashboard/exchanges_sent'
+    else
+
     end
   end
 

@@ -18,6 +18,15 @@ pt:
         author: Autor
         category_id: Categoria
         user_id: Usuário
+      exchange:
+        receiver:
+          book_title: 'Titulo (Livro Desejado)'
+          book_author: 'Autor (Livro Desejado)'
+        sender:
+          book_title: 'Titulo (Seu Livro)'
+          book_author: 'Autor (Seu Livro)'
+        status: 'Situação'
+        created_at: 'Data de criação'
     errors:
       messages:
         blank: 'não pode ser branco'
@@ -122,6 +131,10 @@ pt:
           your_book: 'Seu livro'
         actions:
           confirm: 'Confirmar'
+        success:
+          create: 'Troca efetuada com sucesso'
+    exchange_sent:
+      page_title: 'Trocas enviadas'
   will_paginate:
     previous_label: "&#8592; Anterior"
     next_label: "Próximo &#8594;"
