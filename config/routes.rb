@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   get 'categories/:category' => 'app#index'
   get 'exchanges/new/:book_id' => 'exchanges#new'
+  get 'books/xml' => 'book_tables#xml_books'
 
   resources :users
   resources :book_tables

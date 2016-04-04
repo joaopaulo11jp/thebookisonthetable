@@ -62,6 +62,12 @@ class BookTablesController < ApplicationController
     end
   end
 
+  def xml_books
+    respond_to do |format|
+      format.xml { render :xml => BookTable.all }
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_book_table
