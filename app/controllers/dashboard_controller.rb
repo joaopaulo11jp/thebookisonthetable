@@ -19,6 +19,8 @@ class DashboardController < ApplicationController
   def exchange_reject
     @exchange = Exchange.find(params[:id])
     @exchange.update status: :rejected
+    @exchange.receiver_book.update removed: false
+    @exchange.sender_book.update removed: false
     render 'exchange_received'
   end
 
