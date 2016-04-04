@@ -132,9 +132,14 @@ en:
         actions:
           confirm: 'Confirm'
         success:
-          create: 'Exchange made successfully'  
+          create: 'Exchange made successfully'
     exchange_sent:
-      page_title: 'Exchange sent'
+      page_title: 'Exchanges sent'
+    exchange_received:
+      page_title: 'Exchanges received'
+      actions:
+        accept: 'Yes'
+        reject: 'No'
   will_paginate:
     previous_label: "&#8592; Previous"
     next_label: "Next &#8594;"

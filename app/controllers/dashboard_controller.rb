@@ -3,6 +3,7 @@ class DashboardController < ApplicationController
   layout 'dashboard/dashboard'
 
   def exchange_received
+    @exchanges = Exchange.joins(:receiver_book).where('book_tables.user_id' => current_user.id)
   end
 
   def exchange_sent

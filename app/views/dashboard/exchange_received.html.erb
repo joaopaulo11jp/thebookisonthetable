@@ -1,2 +1,42 @@
-<h1>Dashboard#exchange_received</h1>
-<p>Find me in app/views/dashboard/exchange_received.html.erb</p>
+<h1><%= t('views.exchange_received.page_title') %></h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= t('activerecord.attributes.exchange.sender.book_title') %></th>
+      <th><%= t('activerecord.attributes.exchange.sender.book_author') %></th>
+      <th><%= t('activerecord.attributes.exchange.receiver.book_title') %></th>
+      <th><%= t('activerecord.attributes.exchange.receiver.book_author') %></th>
+      <th><%= t('activerecord.attributes.exchange.status') %></th>
+      <th><%= t('activerecord.attributes.exchange.created_at') %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <!-- Arrumar isso aqui pra trazer só os do usuário -->
+    <% if !@exchanges.nil? %>
+    <% @exchanges.each do |exchange| %>
+      <tr>
+        <td><%= exchange.receiver_book.title %></td>
+        <td><%= exchange.receiver_book.author %></td>
+        <td><%= exchange.sender_book.title %></td>
+        <td><%= exchange.sender_book.author %></td>
+        <td><%= exchange.status %></td>
+        <td><%= exchange.created_at %></td>
+
+        <% if exchange.waiting? %>
+        <td class="last">
+    			<%= link_to(dashboard_exchange_accept_path(exchange.id), class: "btn btn-success", method: :patch) do %>
+    				 <%= t('views.exchange_received.actions.accept') %>
+    			<% end %>
+
+			    <%= link_to(dashboard_exchange_reject_path(exchange.id), class: "btn btn-danger", method: :patch) do %>
+				     <%= t('views.exchange_received.actions.reject') %>
+			    <% end %>
+		    </td>
+        <% end %>
+      </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>

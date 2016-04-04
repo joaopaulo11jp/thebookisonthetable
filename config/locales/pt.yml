@@ -135,6 +135,11 @@ pt:
           create: 'Troca efetuada com sucesso'
     exchange_sent:
       page_title: 'Trocas enviadas'
+    exchange_received:
+      page_title: 'Trocas recebidas'
+      actions:
+        accept: 'Sim'
+        reject: 'Não'
   will_paginate:
     previous_label: "&#8592; Anterior"
     next_label: "Próximo &#8594;"
