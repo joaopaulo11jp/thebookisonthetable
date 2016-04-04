@@ -144,6 +144,9 @@ pt:
       actions:
         accept: 'Sim'
         reject: 'Não'
+    mail:
+      hello: 'Olá'
+      msg: 'Uma nova troca foi enviada a você, pelo o usuário '    
   will_paginate:
     previous_label: "&#8592; Anterior"
     next_label: "Próximo &#8594;"

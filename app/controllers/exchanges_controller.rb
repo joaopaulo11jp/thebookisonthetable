@@ -34,6 +34,8 @@ class ExchangesController < ApplicationController
     @exchange.sender_book = @sender_book
     @exchange.status = :waiting
     if @exchange.save
+      print @receiver_book.user.email
+      UserMailer.exchange_email(@receiver_book.user).deliver_now
       flash[:sucess] = t('views.exchange.new.success.create')
       redirect_to '/dashboard/exchanges_sent'
     else

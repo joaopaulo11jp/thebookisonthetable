@@ -144,6 +144,9 @@ en:
       actions:
         accept: 'Yes'
         reject: 'No'
+    mail:
+      hello: 'Hello'
+      msg: 'A new exchange has made for you by '     
   will_paginate:
     previous_label: "&#8592; Previous"
     next_label: "Next &#8594;"
