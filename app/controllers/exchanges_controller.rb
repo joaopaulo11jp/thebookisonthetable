@@ -16,7 +16,7 @@ class ExchangesController < ApplicationController
   def new
     verify_if_book_is_already_in_exchange
     @exchange = Exchange.new(receiver_book: BookTable.find(params[:book_id]))
-    @availableBooks = BookTable.where(user_id: current_user.id).where(removed: 0).where.not(id: params[:book_id])
+    @availableBooks = BookTable.where(user_id: current_user.id).where(removed: false).where.not(id: params[:book_id])
   end
 
   # GET /exchanges/1/edit
@@ -78,8 +78,8 @@ class ExchangesController < ApplicationController
     end
 
     def update_books(rcv,snd)
-      rcv.update removed:1
-      snd.update removed:1
+      rcv.update removed:true
+      snd.update removed:true
     end
 
     def verify_if_book_is_already_in_exchange

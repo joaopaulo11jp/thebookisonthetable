@@ -3,6 +3,7 @@ BookTable.seed do |s|
   s.author = "autor2"
   s.user_id = 1
   s.category_id = 1
+  s.removed = 0
 end
 
 BookTable.seed do |s|
@@ -10,6 +11,7 @@ BookTable.seed do |s|
   s.author = "autor3"
   s.user_id = 1
   s.category_id = 3
+  s.removed = 0
 end
 
 BookTable.seed do |s|
@@ -17,6 +19,7 @@ BookTable.seed do |s|
   s.author = "autor4"
   s.user_id = 2
   s.category_id = 2
+  s.removed = 0
 end
 
 BookTable.seed do |s|
@@ -24,6 +27,7 @@ BookTable.seed do |s|
   s.author = "autor5"
   s.user_id = 1
   s.category_id = 1
+  s.removed = 0
 end
 
 BookTable.seed do |s|
@@ -31,6 +35,7 @@ BookTable.seed do |s|
   s.author = "autor6"
   s.user_id = 2
   s.category_id = 2
+  s.removed = 0
 end
 
 BookTable.seed do |s|
@@ -38,6 +43,7 @@ BookTable.seed do |s|
   s.author = "autor7"
   s.user_id = 2
   s.category_id = 4
+  s.removed = 0
 end
 
 BookTable.seed do |s|
@@ -45,6 +51,7 @@ BookTable.seed do |s|
   s.author = "autor8"
   s.user_id = 1
   s.category_id = 3
+  s.removed = 0
 end
 
 BookTable.seed do |s|
@@ -52,6 +59,7 @@ BookTable.seed do |s|
   s.author = "autor9"
   s.user_id = 2
   s.category_id = 1
+  s.removed = 0
 end
 
 BookTable.seed do |s|
@@ -59,6 +67,7 @@ BookTable.seed do |s|
   s.author = "autor10"
   s.user_id = 1
   s.category_id = 4
+  s.removed = 0
 end
 
 BookTable.seed do |s|
@@ -66,6 +75,7 @@ BookTable.seed do |s|
   s.author = "autor11"
   s.user_id = 2
   s.category_id = 2
+  s.removed = 0
 end
 
 BookTable.seed do |s|
@@ -73,6 +83,7 @@ BookTable.seed do |s|
   s.author = "autor12"
   s.user_id = 1
   s.category_id = 2
+  s.removed = 0
 end
 
 BookTable.seed do |s|
@@ -80,6 +91,7 @@ BookTable.seed do |s|
   s.author = "autor13"
   s.user_id = 1
   s.category_id = 2
+  s.removed = 0
 end
 
 BookTable.seed do |s|
@@ -87,6 +99,7 @@ BookTable.seed do |s|
   s.author = "autor14"
   s.user_id = 2
   s.category_id = 2
+  s.removed = 0
 end
 
 BookTable.seed do |s|
@@ -94,6 +107,7 @@ BookTable.seed do |s|
   s.author = "autor15"
   s.user_id = 1
   s.category_id = 1
+  s.removed = 0
 end
 
 BookTable.seed do |s|
@@ -101,6 +115,7 @@ BookTable.seed do |s|
   s.author = "autor16"
   s.user_id = 1
   s.category_id = 4
+  s.removed = 0
 end
 
 BookTable.seed do |s|
@@ -108,6 +123,7 @@ BookTable.seed do |s|
   s.author = "autor17"
   s.user_id = 2
   s.category_id = 3
+  s.removed = 0
 end
 
 BookTable.seed do |s|
@@ -115,4 +131,5 @@ BookTable.seed do |s|
   s.author = "autor18"
   s.user_id = 2
   s.category_id = 1
+  s.removed = 0
 end

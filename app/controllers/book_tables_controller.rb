@@ -27,6 +27,7 @@ class BookTablesController < ApplicationController
   def create
     @book_table = BookTable.new(book_table_params)
     @book_table.user_id = current_user.id
+    @book_table.removed = false
     respond_to do |format|
       if @book_table.save
         format.html { redirect_to dashboard_book_path, notice: 'Book table was successfully created.' }
