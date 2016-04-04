@@ -13,7 +13,7 @@ class DashboardController < ApplicationController
   def exchange_accept
     @exchange = Exchange.find(params[:id])
     @exchange.update status: :confirmed
-    render 'exchange_received'
+    redirect_to '/dashboard/exchanges_received'
   end
 
   def exchange_reject
@@ -21,7 +21,7 @@ class DashboardController < ApplicationController
     @exchange.update status: :rejected
     @exchange.receiver_book.update removed: false
     @exchange.sender_book.update removed: false
-    render 'exchange_received'
+    redirect_to '/dashboard/exchanges_received'
   end
 
   def preferences
