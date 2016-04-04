@@ -10,6 +10,18 @@ class DashboardController < ApplicationController
     @exchanges = Exchange.joins(:sender_book).where('book_tables.user_id' => current_user.id)
   end
 
+  def exchange_accept
+    @exchange = Exchange.find(params[:id])
+    @exchange.update status: :confirmed
+    render 'exchange_received'
+  end
+
+  def exchange_reject
+    @exchange = Exchange.find(params[:id])
+    @exchange.update status: :rejected
+    render 'exchange_received'
+  end
+
   def preferences
 
   end

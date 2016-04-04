@@ -21,7 +21,7 @@
         <td><%= exchange.receiver_book.author %></td>
         <td><%= exchange.sender_book.title %></td>
         <td><%= exchange.sender_book.author %></td>
-        <td><%= exchange.status %></td>
+        <td><%= t("views.exchange.status.#{exchange.status}") %></td>
         <td><%= exchange.created_at %></td>
 
         <% if exchange.waiting? %>
@@ -30,7 +30,7 @@
     				 <%= t('views.exchange_received.actions.accept') %>
     			<% end %>
 
-			    <%= link_to(dashboard_exchange_reject_path(exchange.id), class: "btn btn-danger", method: :patch) do %>
+			    <%= link_to(dashboard_exchange_reject_path(exchange.id), class: "btn btn-danger", method: :put) do %>
 				     <%= t('views.exchange_received.actions.reject') %>
 			    <% end %>
 		    </td>

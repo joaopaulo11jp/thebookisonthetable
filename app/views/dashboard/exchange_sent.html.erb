@@ -21,7 +21,11 @@
         <td><%= exchange.receiver_book.author %></td>
         <td><%= exchange.sender_book.title %></td>
         <td><%= exchange.sender_book.author %></td>
-        <td><%= exchange.status %></td>
+        <% case exchange.status
+        when 0 %> <%= t('views.exchange.status.waiting') %></td>
+        <% when 1 %> <td><%= t('views.exchange.status.accepted') %></td>
+        <% when 2 %> <td><%= t('views.exchange.status.rejected') %></td>
+        <% end %>
         <td><%= exchange.created_at %></td>
       </tr>
     <% end %>

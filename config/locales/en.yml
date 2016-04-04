@@ -122,6 +122,10 @@ en:
       errors:
         unavailable_book: 'This book is unavailable to exchange'
         unselected_book: 'You have not selected a book, please verify your collection'
+      status:
+        waiting: 'Waiting'
+        confirmed: 'Accepted'
+        rejected: 'Rejected'
       new:
         page_title: 'New exchange'
         labels:

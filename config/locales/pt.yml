@@ -122,6 +122,10 @@ pt:
       errors:
         unavailable_book: 'Este livro não está mais disponível para trocar'
         unselected_book: 'Você não selecionou um livro, verifique sua coleção'
+      status:
+        waiting: 'Aguardando'
+        confirmed: 'Aceito'
+        rejected: 'Rejeitado'
       new:
         page_title: 'Nova troca'
         labels:

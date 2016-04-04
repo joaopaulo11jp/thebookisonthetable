@@ -33,7 +33,7 @@ Rails.application.routes.draw do
   get 'dashboard/exchanges_sent' => 'dashboard#exchange_sent'
   get 'dashboard/exchanges_received' => 'dashboard#exchange_received'
   patch 'dashboard/exchanges_received/:id/response' => 'dashboard#exchange_accept', as: :dashboard_exchange_accept
-  patch 'dashboard/exchanges_received/:id/response' => 'dashboard#exchange_reject', as: :dashboard_exchange_reject
+  put 'dashboard/exchanges_received/:id/response' => 'dashboard#exchange_reject', as: :dashboard_exchange_reject
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
