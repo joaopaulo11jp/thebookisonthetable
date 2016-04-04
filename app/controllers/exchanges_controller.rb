@@ -26,6 +26,7 @@ class ExchangesController < ApplicationController
   # POST /exchanges
   # POST /exchanges.json
   def create
+    logger = Yell.new STDOUT
     @exchange = Exchange.new
     @receiver_book = BookTable.find(params[:book_id])
     @sender_book = BookTable.find(params[:exchange][:sender_book])
@@ -36,6 +37,7 @@ class ExchangesController < ApplicationController
     if @exchange.save
       print @receiver_book.user.email
       UserMailer.exchange_email(@receiver_book.user).deliver_now
+      logger.info "UMA NOVA TROCA FOI CRIADA !!!!!"
       flash[:sucess] = t('views.exchange.new.success.create')
       redirect_to '/dashboard/exchanges_sent'
     else

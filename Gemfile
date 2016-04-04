@@ -37,7 +37,7 @@ end
 
 #Ineditas
 gem 'seed-fu', '~> 2.3', '>= 2.3.5'
-
+gem "yell"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
